@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <title>CB's World</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section id="page1" class="page">
+  <h1>Welcome to CB's World</h1>
+  <p class="urdu">آپ کو حسیب کی طرف سے گفٹ دیا جائے گا، برائے مہربانی صحیح معلومات کا اندراج کریں</p>
+  <button onclick="goPage(2)">Next</button>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2" class="page hidden">
+  <p class="urdu">آپ کا نام</p>
+  <input id="nameInput" type="text">
+
+  <p class="urdu">آپ کی عمر</p>
+  <input type="number">
+
+  <p class="urdu">کیا آپ کو گفٹ چاہیے؟</p>
+  <button onclick="giftAnswer('yes')">Yes</button>
+  <button onclick="giftAnswer('no')">No</button>
+
+  <p id="answerText" class="urdu prank"></p>
+  <button onclick="goPage(3)">Next</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3" class="page hidden">
+  <h2 id="nameBuild" class="name-build"></h2>
+
+  <div class="boxes">
+    <div onclick="addLetter(this)">🎁</div>
+    <div onclick="addLetter(this)">🎁</div>
+    <div onclick="addLetter(this)">🎁</div>
+    <div onclick="addLetter(this)">🎁</div>
+    <div onclick="addLetter(this)">🎁</div>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section id="page4" class="page hidden">
+  <h1 class="birthday">Happy Birthday</h1>
+  <h2 class="birthday-name">Moeen</h2>
+  <button onclick="goPage(5)">Continue</button>
+</section>
+
+<!-- PAGE 5 PHOTO -->
+<section id="page5" class="page hidden">
+  <h2>🎉 Birthday Moment 🎉</h2>
+  <img src="photo.jpg" width="350" style="border-radius:20px; border:5px solid white;">
+  <br><br>
+  <button onclick="goPage(6)">Open Final Gift 🎁</button>
+</section>
+
+<!-- PAGE 6 VIDEO -->
+<section id="page6" class="page hidden">
+  <video controls autoplay width="700">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

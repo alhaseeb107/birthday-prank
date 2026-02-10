@@ -1,0 +1,61 @@
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.page:not(.hidden) {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+
+body {
+  background: linear-gradient(135deg, #ff0080, #7928ca, #2afadf);
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  min-height: 100vh;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.boxes div {
+  font-size: 90px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.boxes div:hover {
+  transform: scale(1.2);
+}
+
+.used {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.name-build {
+  font-size: 70px;
+  letter-spacing: 15px;
+  margin-bottom: 30px;
+  color: yellow;
+}
+
+@keyframes drop {
+  from { transform: translateY(-200px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.prank {
+  color: red;
+}
