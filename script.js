@@ -18,16 +18,17 @@ function giftAnswer(ans) {
 }
 
 function addLetter(box) {
-  if (box.classList.contains("used")) return;
+  if (box.classList.contains("open")) return;
 
-  if (clickCount < letters.length) {
-    const nameBuild = document.getElementById("nameBuild");
-    nameBuild.innerText += letters[clickCount];
-    clickCount++;
-    box.classList.add("used");
-  }
+  box.classList.add("open");
+  box.innerText = "📦";
 
-  if (clickCount === letters.length) {
+  const letters = ["M", "O", "E", "E", "N"];
+
+  const nameBuild = document.getElementById("nameBuild");
+  nameBuild.innerText += letters[nameBuild.innerText.length];
+
+  if (nameBuild.innerText.length === letters.length) {
     setTimeout(() => goPage(4), 1200);
   }
 }
