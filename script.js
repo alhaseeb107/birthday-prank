@@ -11,9 +11,9 @@ function goPage(n) {
 function giftAnswer(ans) {
   const text = document.getElementById("answerText");
   if (ans === "yes") {
-    text.innerText = "لن لے لو میرا گفٹ";
+    text.innerText = "▄︻デ══━一💥";
   } else {
-    text.innerText = "لن پر چڑھو پھر";
+    text.innerText = "▬▬ι════════ﺤ";
   }
 }
 
